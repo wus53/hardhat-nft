@@ -47,7 +47,10 @@ module.exports = {
         ],
     },
     etherscan: {
-        apiKey: ETHERSCAN_API_KEY,
+        // npx hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
+        apiKey: {
+            goerli: process.env.ETHERSCAN_API_KEY,
+        },
     },
     gasReporter: {
         enabled: true,
